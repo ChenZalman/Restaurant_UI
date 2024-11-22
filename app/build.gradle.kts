@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.restaurant_ui"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.restaurant_ui"
         minSdk = 31
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

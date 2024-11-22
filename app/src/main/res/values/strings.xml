@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">Restaurant_UI</string>
     <string name="hello_world">Hello World!</string>
-    <string name="pita" translatable="false">Pita with shnitzel</string>
-    <string name="NIS35" translatable="false">35NIS</string>
-    <string name="salad" translatable="false">Salad plate</string>
-    <string name="NIS20" translatable="false">20NIS</string>
-    <string name="drinkable_drink" translatable="false">Drinkable Drink</string>
-    <string name="NIS5" translatable="false">5NIS</string>
-    <string name="water" translatable="false">Water</string>
-    <string name="NIS3" translatable="false">3NIS</string>
-    <string name="number_of_diners" translatable="false">Number of diners:</string>
+    <string name="pita">Pita with shnitzel</string>
+    <string name="NIS35">35NIS</string>
+    <string name="salad">Salad plate</string>
+    <string name="NIS20">20NIS</string>
+    <string name="drinkable_drink">Drinkable Drink</string>
+    <string name="NIS5">5NIS</string>
+    <string name="water">Water</string>
+    <string name="NIS3">3NIS</string>
+    <string name="number_of_diners">Number of diners</string>
     <string name="pita_image" translatable="false">Pita image</string>
     <string name="payment_method">Payment method:</string>
     <string name="cash">Cash</string>
     <string name="credit_card">Credit card</string>
     <string name="payment_app">Payment app</string>
-    <string name="from_when_to_reserve">From when to reserve?</string>
+    <string name="from_when_to_reserve">For when to reserve?</string>
 </resources>

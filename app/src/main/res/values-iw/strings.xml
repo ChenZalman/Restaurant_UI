@@ -2,4 +2,18 @@
 <resources>
     <string name="app_name">Restaurant_UI</string>
     <string name="hello_world">שלום עולם!</string>
+    <string name="payment_method">אמצעי תשלום:</string>
+    <string name="cash">מזומן</string>
+    <string name="credit_card">כרטיס אשראי</string>
+    <string name="payment_app">אפליקציית תשלומים</string>
+    <string name="from_when_to_reserve">למתי לשמור?</string>
+    <string name="water">מים</string>
+    <string name="NIS3">3₪‎</string>
+    <string name="pita">פיתה עם שניצל</string>
+    <string name="NIS35">35₪‎</string>
+    <string name="salad">צלחת סלט</string>
+    <string name="NIS20">20₪‎</string>
+    <string name="drinkable_drink">שתיה לשתייה</string>
+    <string name="NIS5">5₪‎</string>
+    <string name="number_of_diners">מספר הסועדים</string>
 </resources>
