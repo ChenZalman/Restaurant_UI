@@ -11,7 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
@@ -20,15 +22,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:contentDescription="@string/pita_image"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -38,7 +39,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/pita"
                         android:textSize="20sp" />
 
@@ -63,12 +65,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:contentDescription="@string/salad"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black"
-                    tools:ignore="HardcodedText" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,7 +78,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/salad"
                         android:textSize="20sp" />
 
@@ -103,11 +104,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:contentDescription="@string/drinkable_drink"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -117,7 +117,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/drinkable_drink"
                         android:textSize="20sp" />
 
@@ -142,11 +143,10 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:contentDescription="@string/water"
-                    android:src="@drawable/ic_launcher_foreground"
-                    app:tint="@color/black" />
+                    android:src="@mipmap/ic_launcher" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -156,7 +156,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/water"
                         android:textSize="20sp" />
 
@@ -201,24 +202,27 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="@string/payment_method"
-                android:textSize="20sp"
-                android:layout_margin="20dp"/>
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <RadioButton
                     android:id="@+id/cash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cash" />
+
                 <RadioButton
                     android:id="@+id/credit_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/credit_card" />
+
                 <RadioButton
                     android:id="@+id/payment_app"
                     android:layout_width="wrap_content"
@@ -230,20 +234,70 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/from_when_to_reserve"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/date_picker_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/pick" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="@string/from_when_to_reserve"
-                android:textSize="20sp"/>
-            <Button
-                android:layout_width="wrap_content"
+                android:text="@string/any_vegans"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/vegan_spinner"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/date_picker_button"
-                android:text="Date"
-                android:layout_marginStart="4dp"/>
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/vegan_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/reserve_btn"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="@string/reserve_sits" />
 
     </LinearLayout>
 

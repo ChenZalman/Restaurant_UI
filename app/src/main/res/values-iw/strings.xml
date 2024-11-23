@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Restaurant_UI</string>
     <string name="hello_world">שלום עולם!</string>
+    <string name="pita_image">פיתה שניצל</string>
     <string name="payment_method">אמצעי תשלום:</string>
     <string name="cash">מזומן</string>
     <string name="credit_card">כרטיס אשראי</string>
@@ -16,4 +17,8 @@
     <string name="drinkable_drink">שתיה לשתייה</string>
     <string name="NIS5">5₪‎</string>
     <string name="number_of_diners">מספר הסועדים</string>
+    <string name="date">תאריך</string>
+    <string name="pick">בחר</string>
+    <string name="any_vegans">יש טבעונים?</string>
+    <string name="no_one_is_vegan">אף אחד לא טבעוני</string>
 </resources>
