@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Context
+import android.content.res.Resources
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -45,17 +47,18 @@ class MainActivity : AppCompatActivity() {
             // Apply the adapter to the spinner.
             spinner.adapter = adapter
         }
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
-                // An item is selected. You can retrieve the selected item using
-                veganText.text = parent.getItemAtPosition(pos).toString()
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                veganText.text = getString(R.string.no_one_is_vegan)
-
-            }
-        }
+        spinnerListener(spinner,veganText)
+//        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
+//                // An item is selected. You can retrieve the selected item using
+//                veganText.text = parent.getItemAtPosition(pos).toString()
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//                veganText.text = getString(R.string.no_one_is_vegan)
+//
+//            }
+//        }
     }
 }
 
@@ -80,4 +83,20 @@ fun dateAndTime(dateText: TextView, timeText: TextView, context: Context): Unit 
     }
     val ttd = TimePickerDialog(context, timeListener, Calendar.HOUR, Calendar.MINUTE, true)
     ttd.show()
+}
+
+fun spinnerListener(spinner: Spinner, veganText: TextView): Unit{
+
+    spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        override fun onItemSelected(parent: AdapterView<*>, view: View?, pos: Int, id: Long) {
+            // An item is selected. You can retrieve the selected item using
+            veganText.text = parent.getItemAtPosition(pos).toString()
+        }
+
+        override fun onNothingSelected(parent: AdapterView<*>?) {
+            veganText.text = Resources.getSystem().getString(R.string.no_one_is_vegan)
+
+        }
+    }
+
 }
