@@ -20,7 +20,11 @@
     <string name="pick">Pick</string>
     <string name="any_vegans">Any vegans?</string>
     <string name="no_one_is_vegan">No one is vegan</string>
-    <string name="reserve_sits" translatable="false">Reserve Sits</string>.
+    <string name="reserve_sits" translatable="false">Confirmed, reserving sits</string>
+    <string name="reserve_information" translatable="false">Reserve Information</string>
+    <string name="summary" translatable="false">Summary:</string>
+    <string name="date_reserved_at" translatable="false">Date reserved: %1$s at %2$s</string>
+    <string name="edit_and_return" translatable="false">edit and return</string>.
 
     <string-array name="vegan_options">
         <item>None</item>
