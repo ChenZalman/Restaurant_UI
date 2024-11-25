@@ -1,6 +1,7 @@
 package com.example.restaurant_ui
 
 
+import android.animation.ObjectAnimator
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
@@ -12,15 +13,18 @@ import android.view.animation.AnimationUtils
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.coroutines.yield
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +44,9 @@ class MainActivity : AppCompatActivity() {
         var paymentMethod: String? = null
         val radioGroup: RadioGroup = findViewById(R.id.radio_group)
         val linearView: LinearLayout = findViewById(R.id.linearLayoutMain)
+        val seekBarNumOfPeople: SeekBar = findViewById(R.id.seekBarNumOfDiners)
         val enlargeAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.enlarge)
+        val fadeout = AnimationUtils.loadAnimation(applicationContext, R.anim.fadeout)
 
         //Function calls to distribute the load from the main function
         linearView.startAnimation(enlargeAnim)
@@ -54,6 +60,10 @@ class MainActivity : AppCompatActivity() {
             dateAndTime(dateText, timeText, this)
         }
         reserveBtn.setOnClickListener {
+//            linearView.startAnimation(fadeout)
+            val alpha = ObjectAnimator.ofFloat(linearView, "alpha", 1f, 0f)
+            alpha.duration = 2000
+            alpha.start()
             dialogCreator(
                 numDiners,
                 dateText,
@@ -62,6 +72,20 @@ class MainActivity : AppCompatActivity() {
                 paymentMethod
             )
         }
+
+        seekBarNumOfPeople.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                numDiners.setText(seekBar?.progress.toString())
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                numDiners.setText(seekBar?.progress.toString())
+            }
+        })
 
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
@@ -101,6 +125,7 @@ class MainActivity : AppCompatActivity() {
     ): Unit {
         val builder = AlertDialog.Builder(this)
         val dialogView = layoutInflater.inflate(R.layout.dialog_layout, null)
+        val checkBoxTos = dialogView.findViewById<CheckBox>(R.id.checkBoxTOS)
         builder.setView(dialogView)
         val dialog = builder.create()
         dialog.setCancelable(false)
@@ -118,9 +143,18 @@ class MainActivity : AppCompatActivity() {
         }
         dialogView.findViewById<Button>(R.id.buttonEdit).setOnClickListener {
             Toast.makeText(this, getString(R.string.edit_and_return), Toast.LENGTH_SHORT).show()
+            val alpha = ObjectAnimator.ofFloat(this.findViewById(R.id.linearLayoutMain), "alpha", 0f, 1f)
+            alpha.duration = 2000
+            alpha.start()
             dialog.dismiss()
         }
         dialog.show()
+
+        //This listener waits for the checkbox to be checked so the user can press the reserve button
+        checkBoxTos.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) dialogView.findViewById<Button>(R.id.buttonReserve).isEnabled = true
+            else dialogView.findViewById<Button>(R.id.buttonReserve).isEnabled = false
+        }
     }
 
     //This function set the selected option from the spinner (dropdown) menu to the text
