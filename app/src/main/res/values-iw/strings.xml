@@ -21,4 +21,8 @@
     <string name="pick">בחר</string>
     <string name="any_vegans">יש טבעונים?</string>
     <string name="no_one_is_vegan">אף אחד לא טבעוני</string>
+    <string name="water_bottle_description">כוס מים וכוס נקייה</string>
+    <string name="drinkable_drink_description">שתייה ירוקה וצהובה</string>
+    <string name="salad_plate_description">סלט של עגבניות, בצל וחסה</string>
+    <string name="pita_with_shnitzel_description">פיתה עם שניצל</string>
 </resources>

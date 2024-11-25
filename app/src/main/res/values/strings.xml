@@ -24,12 +24,17 @@
     <string name="reserve_information" translatable="false">Reserve Information</string>
     <string name="summary" translatable="false">Summary:</string>
     <string name="date_reserved_at" translatable="false">Date reserved: %1$s at %2$s</string>
-    <string name="edit_and_return" translatable="false">edit and return</string>.
+    <string name="edit_and_return" translatable="false">edit and return</string>
+    <string name="water_bottle_description">Water bottle and a clean glass</string>
+    <string name="drinkable_drink_description">Green and yellow soft drinks</string>
+    <string name="salad_plate_description">Salad of tomatos, onions and lettuce</string>
+    .
 
     <string-array name="vegan_options">
         <item>None</item>
         <item>Vegan</item>
 
     </string-array>
+    <string name="pita_with_shnitzel_description">Pita with shnitzel</string>
 
 </resources>

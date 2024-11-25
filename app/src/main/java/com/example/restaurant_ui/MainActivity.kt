@@ -24,7 +24,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.yield
 
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         val linearView: LinearLayout = findViewById(R.id.linearLayoutMain)
         val seekBarNumOfPeople: SeekBar = findViewById(R.id.seekBarNumOfDiners)
         val enlargeAnim = AnimationUtils.loadAnimation(applicationContext, R.anim.enlarge)
-        val fadeout = AnimationUtils.loadAnimation(applicationContext, R.anim.fadeout)
 
         //Function calls to distribute the load from the main function
         linearView.startAnimation(enlargeAnim)
@@ -143,7 +141,8 @@ class MainActivity : AppCompatActivity() {
         }
         dialogView.findViewById<Button>(R.id.buttonEdit).setOnClickListener {
             Toast.makeText(this, getString(R.string.edit_and_return), Toast.LENGTH_SHORT).show()
-            val alpha = ObjectAnimator.ofFloat(this.findViewById(R.id.linearLayoutMain), "alpha", 0f, 1f)
+            val alpha =
+                ObjectAnimator.ofFloat(this.findViewById(R.id.linearLayoutMain), "alpha", 0f, 1f)
             alpha.duration = 2000
             alpha.start()
             dialog.dismiss()

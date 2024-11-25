@@ -47,6 +47,12 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pita_with_shnitzel_description"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -84,6 +90,12 @@
                         android:layout_marginTop="20dp"
                         android:text="@string/salad"
                         android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/salad_plate_description"
+                        android:layout_marginStart="20dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -125,6 +137,12 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/drinkable_drink_description"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -162,6 +180,12 @@
                         android:layout_marginTop="20dp"
                         android:text="@string/water"
                         android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_bottle_description"
+                        android:layout_marginStart="20dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
