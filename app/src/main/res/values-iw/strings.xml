@@ -21,8 +21,12 @@
     <string name="pick">בחר</string>
     <string name="any_vegans">יש טבעונים?</string>
     <string name="no_one_is_vegan">אף אחד לא טבעוני</string>
+    <string name="edit_and_return">ערוך וחזור</string>
     <string name="water_bottle_description">כוס מים וכוס נקייה</string>
     <string name="drinkable_drink_description">שתייה ירוקה וצהובה</string>
     <string name="salad_plate_description">סלט של עגבניות, בצל וחסה</string>
     <string name="pita_with_shnitzel_description">פיתה עם שניצל</string>
+    <string name="reserve_sits">שמור מקומות</string>
+    <string name="summary">תקצי הזמנה:</string>
+    <string name="date_reserved_at">"%1$s at %2$s התאריך השמור: "</string>
 </resources>

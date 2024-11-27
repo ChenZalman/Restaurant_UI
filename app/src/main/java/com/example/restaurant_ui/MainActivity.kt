@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         val spinner: Spinner = findViewById(R.id.vegan_spinner)
         val veganText: TextView = findViewById(R.id.vegan_id)
         val reserveBtn: Button = findViewById(R.id.reserve_btn)
-        val numDiners: EditText = findViewById(R.id.num_diners)
+        val numDiners: TextView = findViewById(R.id.num_diners)
         var paymentMethod: String? = null
         val radioGroup: RadioGroup = findViewById(R.id.radio_group)
         val linearView: LinearLayout = findViewById(R.id.linearLayoutMain)
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
 
     //This function creates a custom dialog to display multiple lines of text to create a summary of the reservation and display and option to return or finish the program (alternative to send a reservation)
     fun dialogCreator(
-        numDiners: EditText,
+        numDiners: TextView,
         dateText: TextView,
         timeText: TextView,
         veganText: TextView,

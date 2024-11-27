@@ -210,14 +210,12 @@
                 android:text="@string/number_of_diners"
                 android:textSize="20sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/num_diners"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginTop="20dp"
-                android:autofillHints="number"
-                android:hint="@string/number_of_diners"
-                android:inputType="number"
+                android:layout_marginStart="20dp"
                 android:textSize="20sp" />
         </LinearLayout>
 
