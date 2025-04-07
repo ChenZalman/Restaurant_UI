@@ -1,5 +1,5 @@
 # Restaurant_UI
- This is an app to see the menu and order sits for a selected date
+ This is the first app I created that allows the user to see a menu and order sits for a selected date
 
 Widgets used:
 1) ImageView
